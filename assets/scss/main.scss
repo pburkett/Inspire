@@ -3,17 +3,130 @@
 @import "./_overrides.scss";
 @import "./custom.scss";
 @import "./loaders.scss";
-
 body {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  background-color: $body-bg;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: $primary;
 }
 
 main {
-  flex-grow: 1;
+    flex-grow: 1;
 }
 
+#app {
+    height: 100vh;
+    // width: fit-content;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
 
+#image-button-div {
+    float: left;
+    bottom: 0%;
+    position: absolute;
+    margin-bottom: 15px;
+    margin-left: 115px
+}
 
+#new-image-button {
+    @extend .text-shadow-sm;
+    font-weight: 850;
+    border-style: none !important;
+    background: none;
+}
+
+#quote-div {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 20%;
+    right: 20%;
+    margin: auto;
+    // justify-content: center;
+}
+
+#quote {
+    @extend .text-shadow-sm;
+    margin: auto;
+    min-width: 200px;
+    max-width: 400px;
+}
+
+#quote-body {
+    @extend .text-shadow-sm;
+}
+
+#quote-author {
+    @extend .text-shadow-sm;
+}
+
+#centered-div {
+    width: 400px;
+    margin: auto;
+    padding-top: 27vh;
+}
+
+#clock {
+    @extend .text-shadow-lg;
+    font-size: 8rem;
+    font-weight: 300;
+}
+
+#greeting {
+    @extend .text-shadow-lg;
+    font-size: 3rem;
+    font-weight: 400;
+}
+
+#weather-icon {
+    width: 75px;
+    height: 75px;
+}
+
+#weather-descrip {
+    @extend .text-shadow-sm;
+    font-size: 2rem;
+}
+
+#weather-location {
+    @extend .text-shadow-sm;
+    font-size: 1.5rem;
+}
+
+#todo-list-div {
+    min-height: 150px;
+    float: right;
+    transform: translateY(-84px);
+    width: 250px;
+    background-color: $secondary;
+    border-bottom: 4px solid $white;
+}
+
+.gray-underline {
+    width: fit-content;
+    border-bottom: 3px solid $success;
+}
+
+.todo-checkbox {
+    width: 20px;
+    height: 20px;
+    margin-top: 5px;
+}
+
+.todo-item {
+    font-weight: 400;
+}
+
+.text-purple {
+    color: $purple;
+}
+
+.text-shadow-lg {
+    text-shadow: $success .2rem .2rem 8px, $success -.2rem -.2rem 8px;
+}
+
+.text-shadow-sm {
+    text-shadow: $success .05rem .05rem 8spx, $success -.05rem -.05rem 8px;
+}

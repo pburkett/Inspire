@@ -100,7 +100,7 @@ main {
     float: right;
     transform: translateY(-84px);
     width: 250px;
-    background-color: $secondary;
+    background-color: $low-opacity-secondary;
     border-bottom: 4px solid $white;
 }
 
@@ -119,14 +119,35 @@ main {
     font-weight: 400;
 }
 
+.todo-delete {
+    display: flex-box;
+    margin-right: 15px;
+    background: none;
+    border-style: none;
+}
+
+input {
+    width: 100px;
+    background: none;
+    border-style: none;
+}
+
+input::placeholder {
+    color: $purple;
+}
+
 .text-purple {
     color: $purple;
 }
 
 .text-shadow-lg {
-    text-shadow: $success .2rem .2rem 8px, $success -.2rem -.2rem 8px;
+    text-shadow: $primary .2rem .2rem 8px, $primary -.2rem -.2rem 8px;
 }
 
 .text-shadow-sm {
-    text-shadow: $success .05rem .05rem 8spx, $success -.05rem -.05rem 8px;
+    text-shadow: $primary .2rem .2rem 5px, $primary -.2rem -.2rem 5px;
+}
+
+.drop-shadow-lg {
+    filter: drop-shadow($primary .2rem .2rem 8px)
 }

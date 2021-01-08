@@ -10765,7 +10765,7 @@ main {
   float: right;
   transform: translateY(-84px);
   width: 250px;
-  background-color: #757575;
+  background-color: rgba(117, 117, 117, 0.7);
   border-bottom: 4px solid white;
 }
 
@@ -10784,16 +10784,37 @@ main {
   font-weight: 400;
 }
 
+.todo-delete {
+  display: flex-box;
+  margin-right: 15px;
+  background: none;
+  border-style: none;
+}
+
+input {
+  width: 100px;
+  background: none;
+  border-style: none;
+}
+
+input::placeholder {
+  color: purple;
+}
+
 .text-purple {
   color: purple;
 }
 
 .text-shadow-lg, #clock, #greeting {
-  text-shadow: #b6adad 0.2rem 0.2rem 8px, #b6adad -0.2rem -0.2rem 8px;
+  text-shadow: #212121 0.2rem 0.2rem 8px, #212121 -0.2rem -0.2rem 8px;
 }
 
 .text-shadow-sm, #new-image-button, #quote, #quote-body, #quote-author, #weather-descrip, #weather-location {
-  text-shadow: #b6adad 0.05rem 0.05rem 8spx, #b6adad -0.05rem -0.05rem 8px;
+  text-shadow: #212121 0.2rem 0.2rem 5px, #212121 -0.2rem -0.2rem 5px;
+}
+
+.drop-shadow-lg {
+  filter: drop-shadow(#212121 0.2rem 0.2rem 8px);
 }
 
 /*# sourceMappingURL=main.css.map */

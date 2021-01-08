@@ -11,16 +11,10 @@
 
 <body>
     <main>
-        <div class="container-fluid" style="background-image: url(https://splashbase.s3.amazonaws.com/jaymantri/large/1pEDw2W);" id="app">
+        <div class="container-fluid" id="app">
 
             <div class="row justify-self-center w-25 m-auto" id="weather-div">
-                <div class="col-3">
-                    <img id="weather-icon" class="mt-2 ml-5" src="http://openweathermap.org/img/wn/04d@2x.png" alt="">
-                </div>
-                <div class="col-9">
-                    <div id="weather-descrip" class="text-center text-white">overcast clouds</div>
-                    <div id="weather-location" class="text-center text-white">Boise, ID</div>
-                </div>
+
             </div>
 
             <div id="todo-list-div" class="row">
@@ -29,13 +23,21 @@
                         <h3 class="text-center text-purple gray-underline">To do...</h3>
                     </div>
                 </div>
-                <div class="col-12">
-                    <div class="pl-3">
-                        <div class="row ">
-                            <input class="todo-checkbox " type="checkbox"></input>
-                            <label class="gray-underline text-shadow-sm todo-item ml-3 text-purple">Walk the Dog</label>
-                        </div>
+                <div id="todo-div" class="col-12">
 
+                    <div class="row pl-3">
+                        <input class="todo-checkbox " type="checkbox"></input>
+                        <label class="gray-underline todo-item ml-3 text-purple">Walk the Dog</label>
+                    </div>
+
+
+                </div>
+                <div class="col-12">
+                    <div class="row justify-content-center">
+                        <form id="new-todo-form" onsubmit="app.todoController.addTodo()">
+                            <input form="new-todo-form" placeholder="New To Do..." type="text" name="description" id="">
+                            <button type="submit">submit</button>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -50,15 +52,11 @@
             </div>
 
             <div id="quote-div">
-                <h5 id="quote-body" class="text-white text-center quote">I never let schooling interfere with my education.</h5>
-                <h5 id="quote-author" class="text-white quote text-center">- Astro Boy</h5>
+                <h5 id="quote-body" class="text-white text-center quote">Loading Quote...</h5>
+                <h5 id="quote-author" class="text-white quote text-center"></h5>
             </div>
         </div>
 
-        <!-- <form id="new-todo-form" onsubmit="app.todoController.addTodo()">
-            <input form="new-todo-form" type="text" name="description" id="">
-            <button type="submit">submit</button>
-        </form> -->
     </main>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="app/main.js" type="module"></script>

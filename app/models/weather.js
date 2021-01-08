@@ -14,7 +14,14 @@ export default class Weather {
     }
 
     get Template() {
-        return `
-    `
+        return `<div class="col-2">
+        <img id="weather-icon" class="mt-2 ml-5 drop-shadow-lg" src="${this.icon}" alt="">
+    </div>
+    <div class="col-9">
+        <div id="weather-descrip" class="text-center text-white">${this.description}</div>
+        <div id="weather-location" class="text-center text-white">${this.getFarenheit()}</div>
+    </div>`
+
+
     }
 }

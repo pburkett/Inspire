@@ -7,6 +7,7 @@ class WeatherService {
         let res = await api.get('weather');
         ProxyState.weather = new Weather(res.data);
     }
+
 }
 
 const weatherService = new WeatherService();

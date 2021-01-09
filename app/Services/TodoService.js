@@ -11,7 +11,7 @@ class TodoService {
         console.log("Getting the Todo List");
         let res = await api.get(url);
         ProxyState.todos = res.data.map(t => new Todo(t))
-
+        this.countCompletedTodos()
     }
 
     async addTodo(todo) {
@@ -29,7 +29,11 @@ class TodoService {
                 'completed': !todo.completed
             }
             console.log(payload);
+
             await api.put(url + todoId, payload)
+            todo.completed = !todo.completed
+            ProxyState.todos = ProxyState.todos
+            this.countCompletedTodos()
         }
 
 
@@ -45,6 +49,15 @@ class TodoService {
 
         } else { console.error('todo removal failed') }
         console.log(ProxyState.todos);
+    }
+
+    countCompletedTodos() {
+        let count = 0
+        ProxyState.todos.forEach(t => {
+            console.log('chec');
+            t.completed ? count++ : ''
+        })
+        ProxyState.taskCompletionCount = count
     }
 }
 

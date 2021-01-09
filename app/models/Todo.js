@@ -12,7 +12,7 @@ export default class Todo {
         <label class="gray-underline todo-item ml-3 text-purple">${this.description}</label>
         <div class="col">
             <div class="row justify-content-end">
-                <button onclick="app.todoController.deleteTodo('${this._id}')" class="todo-delete">X</button>
+                <button onclick="app.todoController.removeTodo('${this._id}')" class="todo-delete">X</button>
             </div>
         </div>
     </div>

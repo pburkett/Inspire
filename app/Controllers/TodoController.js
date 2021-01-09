@@ -9,11 +9,15 @@ function _drawTodos() {
     document.getElementById("todo-div").innerHTML = template
 }
 
+function _drawTodocount() {
+    document.getElementById("completed-count").innerText = ProxyState.taskCompletionCount
+}
+
 export default class TodoController {
     constructor() {
         todoService.getTodos();
         ProxyState.on("todos", _drawTodos)
-
+        ProxyState.on("taskCompletionCount", _drawTodocount)
     }
     getTodos() {
         try {

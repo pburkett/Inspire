@@ -48,9 +48,10 @@ export default class TodoController {
             console.error(error)
         }
     }
-    removeTodo(todoId) {
+    async removeTodo(todoId) {
         try {
-            todoService.removeTodo(todoId);
+            await todoService.removeTodo(todoId);
+            todoService.countCompletedTodos()
         } catch (error) {
             console.error(error)
         }

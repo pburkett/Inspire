@@ -62,6 +62,51 @@ main {
     @extend .text-shadow-sm;
 }
 
+.slide-down {
+    animation: slideDown ease 1s;
+}
+
+.slide-up {
+    animation: slideUp ease 1s;
+    transition: transform 1s;
+    transform: translateY(-20px);
+}
+
+.slide-up-reverse {
+    animation: slideUp ease 1s reverse;
+}
+
+.slide-up-reverse {
+    transition: transform 1s;
+    transform: translateY(20px);
+}
+
+.slide-down-reverse {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s 1s, opacity 1s linear, transform 1s;
+    transform: translateY(-50px);
+}
+
+.opacity-0 {
+    opacity: 0;
+}
+
+@keyframes slideDown {
+    0% {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+.reverse {
+    animation-direction: reverse;
+}
+
 #centered-div {
     width: 400px;
     margin: auto;
@@ -141,13 +186,20 @@ input::placeholder {
 }
 
 .text-shadow-lg {
-    text-shadow: $primary .2rem .2rem 8px, $primary -.2rem -.2rem 8px;
+    text-shadow: $primary .2rem 0rem 8px, $primary -.2rem 0rem 8px, $primary 0rem .2rem 8px, $primary 0rem -.2rem 8px;
 }
 
 .text-shadow-sm {
-    text-shadow: $primary .2rem .2rem 5px, $primary -.2rem -.2rem 5px;
+    text-shadow: $primary .2rem 0rem 5px, $primary -.2rem 0rem 5px, $primary 0rem .2rem 5px, $primary 0rem -.2rem 5px;
 }
 
 .drop-shadow-lg {
-    filter: drop-shadow($primary .2rem .2rem 8px)
+    filter: drop-shadow($primary .2rem 0rem 8px);
+    filter: drop-shadow($primary -.2rem 0rem 8px);
+    filter: drop-shadow($primary 0rem .2rem 8px);
+    filter: drop-shadow( $primary 0rem -.2rem 8px);
+}
+
+.cursor-pointer {
+    cursor: pointer;
 }

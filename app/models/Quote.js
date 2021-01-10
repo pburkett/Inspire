@@ -1,6 +1,7 @@
 export default class Quote {
-    constructor({ author, body }) {
+    constructor({ author, body, error }) {
         this.author = author
-        this.body = body
+        this.body = body || error
+
     }
 }

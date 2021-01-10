@@ -22,4 +22,8 @@ export default class WeatherController {
             console.error(e)
         }
     }
+    changeUnit() {
+        ProxyState.weather.displayCelsius = !ProxyState.weather.displayCelsius
+        ProxyState.weather = ProxyState.weather
+    }
 }

@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="assets/style/main.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Inspire</title>
 </head>
 
@@ -47,7 +48,7 @@
             </div>
 
             <div id="centered-div">
-                <div id="clock" class="text-center text-white">4:20</div>
+                <div id="clock" class="text-center text-white">--:--</div>
                 <div id="greeting" class="text-center text-white">Greetings, Human</div>
             </div>
 
@@ -55,10 +56,15 @@
                 <button onclick="app.imageController.getImage()" id="new-image-button" class="text-white bg-none border-none">New Image</button>
             </div>
 
-            <div id="quote-div">
+            <a title="Read More on Wikipedia" id="quote-div">
                 <h5 id="quote-body" class="text-white text-center quote"></h5>
-                <h5 id="quote-author" class="text-white quote text-center opacity-0">Loading Author...</h5>
-            </div>
+                <!-- <div href="" id="quote-author-div" class="opacity-0"> -->
+                <h5 id="quote-author" class="text-white quote text-center opacity-0">Loading Author...
+                </h5>
+
+                <!-- </div> -->
+
+            </a>
         </div>
 
     </main>

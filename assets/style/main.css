@@ -10868,4 +10868,9 @@ input::placeholder {
   cursor: pointer;
 }
 
+i {
+  font-size: 50pt;
+  color: white;
+}
+
 /*# sourceMappingURL=main.css.map */

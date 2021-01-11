@@ -7,6 +7,8 @@ function _draw() {
     document.getElementById("quote-body").innerText = ProxyState.quote.body
     document.getElementById("quote-author").innerText = ProxyState.quote.author
 
+    document.getElementById("quote-div").href = ProxyState.quote.link
+
 }
 
 

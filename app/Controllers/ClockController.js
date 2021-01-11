@@ -8,10 +8,18 @@ function _draw() {
 export default class ClockController {
 
     constructor() {
+
+        this.clockTick()
+        ProxyState.on("time", _draw)
+    }
+    clockTick() {
+        setInterval(() => {
+            this.getTime()
+        }, 1200);
+    }
+    getTime() {
         let x = new Date()
-        console.log(`${x.getHours()}:${x.getMinutes()}`);
         ProxyState.time = `${x.getHours()}:${x.getMinutes()}`
-        ProxyState.on("time", _draw())
     }
 
 }
